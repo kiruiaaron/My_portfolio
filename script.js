@@ -27,6 +27,14 @@ let navLinks = document.querySelectorAll('nav ul li a')
 
 let sections = document.querySelectorAll('section')
 
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', function () {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+
 window.addEventListener('scroll', function(){
     const scrollPos = window.scrollY + 20
     sections.forEach(section =>{
